@@ -8,4 +8,5 @@ dist
 .coding-ide
 dev.db
 build
+.vscode
 
