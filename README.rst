@@ -5,7 +5,7 @@ django-db-logs
 Disclaimer
 ----------
 
-Update from djang-db-logger, due to inactivity of the original package.
+Update from django-db-logger, due to inactivity of the original package.
 
 Original readme
 ---------------
@@ -16,7 +16,6 @@ For large projects please use `Sentry <https://github.com/getsentry/sentry>`_
 Screenshot
 ----------
 .. image:: https://ciciui.github.io/django-db-logger/static/img/django-db-logger.png
-    :target: https://travis-ci.org/CiCiUi/django-db-logger
 
 Dependency
 ----------
@@ -34,7 +33,7 @@ Quick start
 
 .. code-block:: bash
 
-    pip install django-db-logger
+    pip install django-db-logs
 
 2. Add "django_db_logs" to your ``INSTALLED_APPS`` setting like this
 
@@ -74,8 +73,8 @@ Quick start
         }
     }
 
-4. Run ``python manage.py migrate`` to create django-db-logger models.
-5. Use ``django-db-logger`` like this
+4. Run ``python manage.py migrate`` to create django-db-logs models.
+5. Use ``django-db-logs`` like this
 
 .. code-block:: python
 
