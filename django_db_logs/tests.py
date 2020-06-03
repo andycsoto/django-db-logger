@@ -3,13 +3,13 @@ from __future__ import unicode_literals
 import logging
 from django.contrib.admin import AdminSite
 from django.test import TestCase
-from django_db_logger.admin import StatusLogAdmin
+from django_db_logs.admin import StatusLogAdmin
 from .models import StatusLog
 
 
 class TestDbLogger(TestCase):
     def setUp(self):
-        self.logger = logging.getLogger('db_logger')
+        self.logger = logging.getLogger('db_logs')
         self.status_log_admin = StatusLogAdmin(StatusLog, AdminSite())
 
     def __test_log_aux(self, msg, fn, level):

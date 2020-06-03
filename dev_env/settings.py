@@ -19,7 +19,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'django_db_logger',
+    'django_db_logs',
 )
 
 MIDDLEWARE = [
@@ -46,7 +46,7 @@ LOGGING = {
     'handlers': {
         'db_handler': {
             'level': 'DEBUG',
-            'class': 'django_db_logger.db_log_handler.DatabaseLogHandler',
+            'class': 'django_db_logs.db_log_handler.DatabaseLogHandler',
             'formatter': 'verbose'
         }
     },
@@ -58,8 +58,8 @@ LOGGING = {
     }
 }
 
-DJANGO_DB_LOGGER_ENABLE_FORMATTER = True
-DJANGO_DB_LOGGER_ADMIN_LIST_PER_PAGE = 30
+DJANGO_db_logs_ENABLE_FORMATTER = True
+DJANGO_db_logs_ADMIN_LIST_PER_PAGE = 30
 
 TEMPLATES = [
     {

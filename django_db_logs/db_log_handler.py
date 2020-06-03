@@ -1,6 +1,6 @@
 import logging
 
-from django_db_logger.config import DJANGO_DB_LOGGER_ENABLE_FORMATTER, MSG_STYLE_SIMPLE
+from django_db_logs.config import DJANGO_db_logs_ENABLE_FORMATTER, MSG_STYLE_SIMPLE
 
 
 db_default_formatter = logging.Formatter()
@@ -15,7 +15,7 @@ class DatabaseLogHandler(logging.Handler):
         if record.exc_info:
             trace = db_default_formatter.formatException(record.exc_info)
 
-        if DJANGO_DB_LOGGER_ENABLE_FORMATTER:
+        if DJANGO_db_logs_ENABLE_FORMATTER:
             msg = self.format(record)
         else:
             msg = record.getMessage()

@@ -13,7 +13,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django_db_logger',
+    'django_db_logs',
 )
 
 # < django 1.10
@@ -64,11 +64,11 @@ LOGGING = {
     'handlers': {
         'db': {
             'level': 'DEBUG',
-            'class': 'django_db_logger.db_log_handler.DatabaseLogHandler'
+            'class': 'django_db_logs.db_log_handler.DatabaseLogHandler'
         }
     },
     'loggers': {
-        'db_logger': {
+        'db_logs': {
             'handlers': ['db'],
             'level': 'DEBUG'
         }

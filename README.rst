@@ -36,13 +36,13 @@ Quick start
 
     pip install django-db-logger
 
-2. Add "django_db_logger" to your ``INSTALLED_APPS`` setting like this
+2. Add "django_db_logs" to your ``INSTALLED_APPS`` setting like this
 
 .. code-block:: python
 
     INSTALLED_APPS = (
         ...
-        'django_db_logger',
+        'django_db_logs',
     )
 
 3. Add handler and logger to ``LOGGING`` setting like this
@@ -63,7 +63,7 @@ Quick start
         'handlers': {
             'db_log': {
                 'level': 'DEBUG',
-                'class': 'django_db_logger.db_log_handler.DatabaseLogHandler'
+                'class': 'django_db_logs.db_log_handler.DatabaseLogHandler'
             },
         },
         'loggers': {
@@ -80,19 +80,19 @@ Quick start
 .. code-block:: python
 
     import logging
-    db_logger = logging.getLogger('db')
+    db_logs = logging.getLogger('db')
 
-    db_logger.info('info message')
-    db_logger.warning('warning message')
+    db_logs.info('info message')
+    db_logs.warning('warning message')
 
     try:
         1/0
     except Exception as e:
-        db_logger.exception(e)
+        db_logs.exception(e)
 
 
 
 Options
 -------
-1. DJANGO_DB_LOGGER_ADMIN_LIST_PER_PAGE: integer. list per page in admin view. default ``10``
-2. DJANGO_DB_LOGGER_ENABLE_FORMATTER: boolean. Using ``formatter`` options to format message.``True`` or ``False``, default ``False``
+1. DJANGO_db_logs_ADMIN_LIST_PER_PAGE: integer. list per page in admin view. default ``10``
+2. DJANGO_db_logs_ENABLE_FORMATTER: boolean. Using ``formatter`` options to format message.``True`` or ``False``, default ``False``

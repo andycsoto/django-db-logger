@@ -10,7 +10,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 setup(
     name='django-db-logs',
     version='0.1',
-    packages=['django_db_logger', 'django_db_logger.migrations'],
+    packages=['django_db_logs', 'django_db_logs.migrations'],
     include_package_data=True,
     license='MIT License',
     description='Django logging in database',

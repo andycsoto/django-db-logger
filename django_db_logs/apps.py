@@ -2,5 +2,5 @@ from django.apps import AppConfig
 
 
 class DbLoggerAppConfig(AppConfig):
-    name = 'django_db_logger'
+    name = 'django_db_logs'
     verbose_name = 'Db logging'
