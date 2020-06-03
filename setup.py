@@ -8,16 +8,16 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name='django-db-logger',
-    version='0.1.9',
+    name='django-db-logs',
+    version='0.1',
     packages=['django_db_logger', 'django_db_logger.migrations'],
     include_package_data=True,
     license='MIT License',
     description='Django logging in database',
     long_description=README,
-    url='https://github.com/CiCiUi/django-db-logger',
-    author='zhangshine',
-    author_email='zhangshine0125@gmail.com',
+    url='https://github.com/CiCiUi/django-db-logs',
+    author='andycsoto',
+    author_email='alcifuen@uc.cl',
     install_requires=['django>=1.6', 'six'],
     classifiers=[
         'Environment :: Web Environment',
